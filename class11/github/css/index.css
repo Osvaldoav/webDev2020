@@ -1,0 +1,8 @@
+body {
+  font-family: sans-serif;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
