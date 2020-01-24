@@ -29,7 +29,14 @@ let students = [
 ];
 
 app.get('/api/students/', (req, res) => {
-  return res.status(200).json(students);
+  StudentList.getAll()
+    .then( studentList => {
+      return res.status(200).json(studentList);
+    })
+    .catch( error => {
+      
+    });
+  // return res.status(200).json(students);
 });
 
 app.get('/api/getById', (req, res) => {
